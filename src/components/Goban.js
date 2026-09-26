@@ -393,7 +393,9 @@ export default class Goban extends Component {
           hotspot = true
           break
         }
-        history.push(node)
+        if (node.data.B != null || node.data.W != null) {
+          history.push(node)
+        }
       }
       if (
         (moveNumbersType === 'variation' &&
